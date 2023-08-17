@@ -66,8 +66,8 @@ jobs:
         id: build_image
         env:
           REGISTRY: ghcr.io
-          IMAGE_NAME: $demofinaljmt
-          ECR_REPOSITORY: $demofinaljmt
+          IMAGE_NAME: ${{ github.repository }}
+          ECR_REPOSITORY: ${{ github.repository }}
           IMAGE_TAG: ${{ env.IMAGE_TAG }}
         run: |
           echo REGISTRY: $REGISTRY
